@@ -26,7 +26,7 @@ This project provides an example of using a custom agent to retrieve weather for
    git clone ...
    cd mcp-lightning-lesson
    ```
-2. Create a venv using uv:
+2. Create a venv using [uv](astral.sh/uv):
    ```sh
    uv venv
    ```
