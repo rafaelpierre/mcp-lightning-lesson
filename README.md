@@ -1,4 +1,5 @@
-# MCP Lightning Lesson
+# Build Your First Agentic AI App with MCP
+## Maven Lightning Lesson
 
 A Python project demonstrating the use of OpenAI GPT models and MCP (Model Context Protocol) agents to fetch and process real-world data.
 
