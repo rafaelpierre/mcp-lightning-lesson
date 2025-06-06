@@ -8,18 +8,17 @@ from agents import Agent, Runner, function_tool
 async def get_time() -> str:
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-mcp_fetch = MCPServerStdio(params = {
-    "command": "uvx",
-    "args": ["mcp-server-fetch"]
-})
+
+mcp_fetch = MCPServerStdio(params={"command": "uvx", "args": ["mcp-server-fetch"]})
+
 
 async def run(prompt: str) -> str:
     async with mcp_fetch:
         agent = Agent(
-            name = "assistant",
+            name="assistant",
             model="gpt-4.1-mini",
-            mcp_servers = [mcp_fetch],
-            tools = [get_time]
+            mcp_servers=[mcp_fetch],
+            tools=[get_time],
         )
 
         result = await Runner.run(
@@ -35,7 +34,7 @@ async def run(prompt: str) -> str:
                     4. Just return the result as structured JSON data, no other text.
                 ### WHY
                     I wanna go snowboarding, but only if conditions allow it.
-            """.format(prompt=prompt)
+            """.format(prompt=prompt),
         )
 
         return result.final_output
