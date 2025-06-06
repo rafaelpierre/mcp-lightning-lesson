@@ -32,8 +32,6 @@ class PromptRequest(BaseModel):
 
 @app.post("/pipeline")
 async def pipeline(request: PromptRequest):
-    print(f"Received request with prompt: {request}")
-    print(f"Received request with prompt: {request.prompt}")
     logging.info(f"Received request with prompt: {request.prompt}")
     result = await run(request.prompt)
     return {"result": result}
