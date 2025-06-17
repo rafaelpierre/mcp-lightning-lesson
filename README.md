@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/rafaelpierre-mcp-lightning-lesson-badge.png)](https://mseep.ai/app/rafaelpierre-mcp-lightning-lesson)
+
 # Build Your First Agentic AI App with MCP
 ## Maven Lightning Lesson
 
